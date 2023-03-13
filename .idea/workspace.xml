@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22bfd644-ead5-4aee-82e5-d89072013452" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prepros-6.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros-6.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pug/pages/subpages/jApine.pug" beforeDir="false" afterPath="$PROJECT_DIR$/src/pug/pages/subpages/jApine.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +70,7 @@
       <workItem from="1678554320905" duration="2000" />
       <workItem from="1678554332978" duration="5748000" />
       <workItem from="1678560630931" duration="24681000" />
-      <workItem from="1678667031612" duration="3985000" />
+      <workItem from="1678667031612" duration="4948000" />
     </task>
     <servers />
   </component>
