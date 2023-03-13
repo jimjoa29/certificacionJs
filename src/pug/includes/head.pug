@@ -1,0 +1,72 @@
+//- Insert Global Functions
+include ../functions/global
+
+//- Insert Global Data
+include ../data/global
+include ../data/_people
+include ../data/_fruits
+include ../data/_cars
+
+//- Insert Global Mixins Components
+include ../components/mixins+
+
+//- Insert Global Mixins Layouts
+include ../layouts/_categories+
+include ../layouts/_programs+
+
+//- Insert Global Mixins Plugins
+include ../plugins/slides++
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    //- Meta
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    //- Title
+    <title>Proyecto Base</title>
+
+    //- CSS Style
+    <link rel="stylesheet" href="#{base}assets/css/styles.css?#{fingerprint}">
+
+    //- Jquery 3.5.1
+    <script type="text/javascript" src="#{base}assets/js/jquery.js" ></script>
+
+    //- Slides 5.2.1
+    <script type="text/javascript" src="#{base}assets/js/slides.js" defer></script>
+
+    //- Plugins 5.2.1
+    <script type="text/javascript" src="#{base}assets/js/plugins.js" defer></script>
+
+    //- SweetAlert2 11.0.0
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+
+    //- Axios Library
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+
+    //- AlpineJS Library
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+    //- Script Index JS Own
+    <script  src="#{base}assets/js/script.js" defer></script>
+
+    //- CDN Font Awesome
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
+
+
+
+</head>
+
+<body class="slides scroll">
+
+
+include navbar
+include sidebar
+
+
+

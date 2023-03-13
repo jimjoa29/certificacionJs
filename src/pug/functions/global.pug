@@ -1,0 +1,28 @@
+<script>
+
+
+    -
+
+        //- Funciones String
+
+        const capitalize = ( string ) => {
+
+            return string.charAt(0).toUpperCase() + string.slice(1);
+
+        };
+
+
+        const url = ( string ) => {
+
+            return string.replace(' / ', '-').replace('.', '').replace(/[, ]+/g, ' ').replace('/', '-').split(' ').join('-').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+
+        };
+
+        // Funciones Numericas
+
+        const randomMinMax = (min, max) => {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+
+</script>

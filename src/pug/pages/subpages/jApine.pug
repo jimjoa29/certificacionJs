@@ -1,0 +1,122 @@
+-
+
+    //- ::: Variables PUG ::: -//
+
+    let base = '../';
+
+
+//- ::: Include Head & Body ::: -//
+include ../../includes/head
+
+
+//-API CON ALPINES JS
+<section class="slide fade-1 kenBurns animate active selected" data-title="Slide #74 (74)" data-name="slide-74-44761e8b">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+                <div class="fix-6-12">
+                    <h1 class="smaller margin-bottom-2  done">La Peliculas más Populares del Momento</h1>
+                    <h6 class="large done"><span class="opacity-8 "></span>Alpines Js</h6>
+                </div>
+
+                <div class="fix-12-12 margin-top-4 center">
+                    //-Consumo de Api
+                    <div x-data="main()" x-init="fetch(url).then(response => response.json()).then( json => { peliculas = json.results; numPages = json.info.pagina; })">
+
+
+                        <div class="personajes-list flex flex-center gap-15">
+
+                            <template x-for ="pelicula in peliculas">
+
+                                <div class="personaje ">
+                                    <img x-bind:src=`https://image.tmdb.org/t/p/w500/${pelicula.poster_path}` width="225">
+                                    <div class="padding-top-2 ">
+                                        <p class="small" x-text="pelicula.original_title"></p>
+                                        <p class="" x-text="pelicula.release_date"></p>
+                                    </div>
+                                </div>
+                            </template>
+
+                        </div>
+
+
+                        <div class="fix-12-12 black padding-bottom-3 padding-top-3">
+                            <p>Numero de Páginas: <span x-text="numPages"></span></p>
+                            <p>Pagina Actual: <span x-text="pagina"></span></p>
+
+
+                                <button @click="changePage('prev')">Anterior</button>
+                                <button @click="changePage('next')">Siguiente</button>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background" style="background-image:url(#{base}../../../../assets/img/home/backgrounds/)"></div>
+
+
+</section>
+
+//-FORMULARIO
+<section class="slide fade-6" data-title="Homepage" data-name="homepage">
+    <div class="content">
+        <div class="container">
+            <div class="wrap">
+
+
+                <ul class="flex">
+                    <li class="fix-5-12 margin-top-desktop-20 margin-top-10 margin-bottom-6">
+                        <h2 class=" roboto weight-9 margin-top-desktop-2" style="line-height: .9em;" >Las Mejores Peliculas</h2>
+                        <h4 class=" small  roboto weight-3 margin-top-1" style="line-height: .9em;" >Escribenos para más información</h4>
+                        <div style="margin: 0 80px">
+                            <p class="smaller weight-6 margin-top-1" id="cities"></p>
+                        </div>
+
+                        <a href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hola%20🇨🇱!,%20Tengo%20algunas%20dudas%20¿me%20podrían%20asesorar?%20😊" class="button small green rounded crop margin-bottom-1 margin-right-1" ><span class='material-icons relative md-24' style="left: -2px; top: 1px">whatsapp</span>Contactame por WhatsApp</a>
+                    </li>
+
+
+                    <li class="fix-4-12">
+
+
+                        <div class="pad padding-top-3 shadow selected">
+
+                            <h6 class="largest roboto weight-9 opacity-8 padding-top-2" style="line-height: .9em" >Solicita tu Película</h6>
+                            <h6 class="smaller weight-6 margin-bottom-1 opacity-8" >En este Formulario</h6>
+
+                            +form_personalized_attention()
+                        </div>
+                    </li>
+
+                </ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="background youtube" style="background-image:url(https://img.youtube.com/vi/dybtieM7QZA/maxresdefault.jpg);" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=dybtieM7QZA', containment:'self', startAt: 10, stopAt: 75, showControls:false, autoPlay:true, loop:true, mute:true, opacity:1, quality:'highres', stopMovieOnBlur:false, remember_last_time: true}"></div>
+
+
+
+</section>
+
+//- :::  Section of Plugins in this Page ::: -//
++background_youtube()
+
+//- Botón de Whatsapp Flotante
++nav_fixed_whatsapp_default()
+
+//- Script
+include ../../scripts/script.js
+include ../../scripts/scriptApi.js
+
+
+//- :::  Star Footer Content ::: -//
+include ../../includes/footer

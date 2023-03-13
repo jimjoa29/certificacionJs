@@ -1,0 +1,152 @@
+//- ::: Button Language ::: -// ---------------------------------------------------------------------------------------->
+
+
+mixin multilingual()
+    <nav class="panel fixed bottom forceMobilView">
+        <div class="sections desktop">
+            <div class="right">
+
+                <span data-dropdown-id="language" class="button center actionButton dropdownTrigger margin-bottom-8">es</span>
+
+            </div>
+        </div>
+    </nav>
+
+    <div class="dropdown translate bottom right" data-dropdown-id="language">
+        <ul>
+            <li class="active" data-switch-lang="es">Español</li>
+            <li data-switch-lang="en">English</li>
+        </ul>
+    </div>
+
+
+//- ::: Botón WhatsApp Homepage ::: -// ---------------------------------------------------------------------------------------->
+
+mixin nav_fixed_whatsapp_default()
+    <nav class="panel fixed bottom forceMobilView">
+        <div class="sections desktop">
+            <div class="right">
+
+                <a data-lang="es" href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hola%20🇨🇱!,%20Tengo%20algunas%20dudas%20¿me%20podrían%20asesorar?%20😊" target="_blank">
+
+                            <span class="button center actionButton dropdownTrigger social-whatsapp margin-bottom-2">
+                                <span class="material-icons" style="font-size: 34px !important; top: -5px; left: -5px">whatsapp</span>
+                            </span>
+
+                </a>
+
+
+                <a data-lang="en" href="https://api.whatsapp.com/send?phone=#{ whatsapp_number }&text=¡Hi%20🇨🇱!,%I%20have%20some%20doubts,%20could%20you%20advise%20me?%20😊" target="_blank" style="display: none">
+
+                            <span class="button center actionButton dropdownTrigger social-whatsapp margin-bottom-2">
+                                <span class="material-icons" style="font-size: 34px !important; top: -5px; left: -5px">whatsapp</span>
+                            </span>
+
+                </a>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+//- ::: Formulario / Botón de Envío ::: -// ---------------------------------------------------------------------------------------->
+
+mixin form_brochure_submit()
+
+    <script type="text/javascript">var submitted = false;</script>
+    <iframe name="hidden_iframe_1" id="hidden_iframe_1" style="display:none;" onload="if(submitted)  { var element = document.getElementById('form_program_submit');  element.classList.toggle('green') ; element.classList.toggle('disableClick') ; element.innerHTML = 'Solicitud Enviada';  Swal.fire({position: 'center',icon: 'success',title: 'Solicitud Envíada, Instrucciones en tu correo electrónico',showConfirmButton: false, timer: 3750 }) ; setTimeout(function(){ window.location='/'}, 4500) }"></iframe>
+
+
+//- ::: Formulario  ::: -// ---------------------------------------------------------------------------------------->
+
+mixin form_personalized_attention()
+    +form_brochure_submit()
+
+    //- Formulario
+    <form data-lang="es" id="form_program" action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSd-6zj1I7sCQlYqEp2DUVfe2RuhP7JdyF4kXi2u_qNxs56Wew/formResponse" class="slides-form wide left" method="post" target="hidden_iframe_1" onsubmit="submitted=true;">
+
+        <ul class="flex noSpaces">
+            <li class="col-12-12 form-55-input-1">
+
+                //- Nombre Completo
+                <div class="label"><label class="left opacity-5" for="first_name_es"> <span class="material-icons relative" style="bottom: -6px">account_circle</span> Nombre</label></div>
+                <input class="rounded wide" id="first_name_es" type="text" name="entry.592287350" placeholder="Ingrese su Nombre" pattern="^\[a-zA-ZÑñ]{3,}$" title="Ingrese un Nombre Válido" required/>
+            </li>
+
+
+
+            <li class="col-12-12 form-55-input-1">
+
+                //- Correo Electrónico
+                <div class="label"><label class="opacity-5" for="email_es"><span class="material-icons relative" style="bottom: -6px">email</span> Correo Electrónico</label></div>
+                <input class="rounded wide" id="email_es" type="email" name="entry.382888687" placeholder="Ingrese su Correo Electrónico" pattern="^\[^@]+@[^@]+\.[a-zA-Z]{2,}$" title="Ingresa un Correo Válido" required/>
+
+            </li>
+
+
+
+            <li class="col-12-12 form-55-input-1">
+
+                //- WhatsApp
+                <div class="label"><label class="left opacity-5" for="mobile_phone_es"> <span class="material-icons relative" style="bottom: -7px">smartphone</span> Móvil ( +56912341234 )</label></div>
+                <input class="rounded wide" id="mobile_phone_es" type="text" name="entry.870415242" placeholder="Ingrese Móvil" value="+569" pattern="^\+[0-9]{10,13}$" title="Ingresar WhatsApp Válido, Ejemplo: +56912341234 o del formato de tu país" required/>
+
+
+            </li>
+
+
+            //-<li class="col-12-12 form-55-input-1">
+
+                <div class="label"><label class="opacity-5" for="program_name_es"><span class="material-icons relative" style="bottom: -6px">description</span> Nombre del Programa</label></div>
+
+                //- Nombre del Servicio
+                <select class="rounded wide" name="entry.1109288339" id="program_name_es">
+
+                    <option value="Opción 1" selected>Opción 1</option>
+                    <option value="Opción 2" selected>Opción 2</option>
+                    <option value="Opción 3" selected>Opción 3</option>
+
+                </select>
+            </li>
+
+            <li class="col-12-12 form-55-input-1">
+
+                //- Campo de Comentario
+                <div class="label"><label class="left opacity-5" for="first_name_es"> <span class="material-icons relative" style="bottom: -6px"></span> Aqui Solicita las Películas!!!</label></div>
+                <input class="rounded wide" id="peliculass" type="text" name="entry.2117092948" placeholder="Ingrese las películas" pattern="^\[a-zA-ZÑñ]{3,}$" title="Ingrese un Nombre Válido" required/>
+
+            </li>
+
+            //- Brochure ID
+            <li class="col-12-12 form-55-input-1 none">
+
+                <div class="label"><label class="opacity-5" for="brochure_id_es"><span class="material-icons relative" style="bottom: -6px">fingerprint</span> Brochure ID</label></div>
+
+                <select class="rounded wide" name="entry.756464419" id="brochure_id_es">
+                    <option value="ID_BROCHURE" selected> ID_BROCHURE </option>
+                </select>
+
+            </li>
+
+
+            //- Labels IDs
+            <li class="col-12-12 form-55-input-1 none">
+
+                <div class="label"><label class="opacity-5" for="labels_ids"><span class="material-icons relative" style="bottom: -6px">record_voice_over</span> Labels IDs</label></div>
+
+                <input class="rounded wide" id="labels_ids" type="text" name="entry.1849183049" value="LABELS_IDS" required/>
+
+
+            </li>
+
+            
+        </ul>
+
+        <button type="submit" class="button wide blue rounded cropBottom margin-top-2" id="form_program_submit">Solicita tus Películas</button>
+
+
+    </form>
+
+
+
